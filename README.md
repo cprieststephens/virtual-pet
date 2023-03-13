@@ -19,6 +19,6 @@ Use the command `npm install` to download the project's dependencies and create 
 
 ### Running the tests
 
-Use the command `npm test` to run the Jest tests for this project.
+Use the command `npm run test` to run the Jest tests for this project.
 
 Author: Camilla Priest-Stephens
