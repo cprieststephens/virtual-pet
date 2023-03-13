@@ -11,7 +11,7 @@ Features:
 
 ### Clone this repository
 - Create a fork of this repo.
-- Clone your copy of the repo using the command: `git clone git@github.com:*your-github-username*/*repo-name*.git
+- Clone your copy of the repo using the command: `git clone git@github.com:*your-github-username*/*repo-name*.git`
 
 ### Install the project dependencies
 
