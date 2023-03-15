@@ -17,4 +17,9 @@ Pet.prototype.walk = function() {
     this.fitness <= 6 ? this.fitness += fitnessIncrementPerWalk : this.fitness += (maxFitnessLevel - this.fitness);
 };
 
+Pet.prototype.feed = function() {
+    const hungerDecrementPerFeed = 3;
+    this.hunger >= 3 ? this.hunger -= hungerDecrementPerFeed : this.hunger -= this.hunger;
+};
+
 module.exports = Pet;

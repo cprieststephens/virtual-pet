@@ -43,14 +43,29 @@ describe("growUp", () => {
 describe("walk", () => {
   it("increments the fitness by 4 when the fitness level is less than or equal to 6", () => {
     const pet = new Pet("Fido");
-    this.fitness = 6;
+    pet.fitness = 6;
     pet.walk();
     expect(pet.fitness).toEqual(10);
   });
   it("increments the fitness by (10-fitness level) when the fitness level is greater than 6", () => {
     const pet = new Pet("Fido");
-    this.fitness = 7;
+    pet.fitness = 7;
     pet.walk();
     expect(pet.fitness).toEqual(10);
+  });
+});
+
+describe("feed", () => {
+  it("decrements the hunger by 3 when the hunger level is greater than or equal to 3", () => {
+    const pet = new Pet("Fido");
+    pet.hunger = 10;
+    pet.feed();
+    expect(pet.hunger).toEqual(7);
+  });
+  it("decrements the hunger level by the value of the hunger level if less than 3", () => {
+    const pet = new Pet("Fido");
+    pet.hunger = 2;
+    pet.feed();
+    expect(pet.hunger).toEqual(0);
   });
 });
