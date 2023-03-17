@@ -3,6 +3,7 @@ function Pet(name) {
     this.age = 0;
     this.hunger = 0;
     this.fitness = 10;
+    this.children = [];
 }
 
 Pet.prototype = {
@@ -46,6 +47,11 @@ Pet.prototype.checkUp = function() {
     this.hunger >= maximumDesiredHunger && this.fitness > minimumDesiredFitness ? "I am hungry":
     this.hunger >= maximumDesiredHunger && this.fitness <= minimumDesiredFitness ? "I am hungry AND I need a walk": 
     "I feel great!";
+};
+
+Pet.prototype.adoptChild = function () {
+    const child = new Pet("Child");
+    return this.children.push(child);
 };
     
 module.exports = Pet;

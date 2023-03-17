@@ -20,6 +20,10 @@ describe("constructor", () => {
     const pet = new Pet("Fido");
     expect(pet.fitness).toEqual(10);
   });
+  it("sets the children property as an empty array", () => {
+    const pet = new Pet ("Fido");
+    expect(pet.children).toEqual([]);
+  })
 });
 
 describe("isAlive", () => {
@@ -173,6 +177,15 @@ describe("checkUp", () => {
     pet.hunger = 4;
     pet.checkUp();
     expect(pet.checkUp()).toEqual("I feel great!")
+  });
+});
+
+describe("adoptChild", () => {
+  it("adds child object to parent object's children array", () => {
+    const parent = new Pet("Parent");
+    const child = new Pet("Child");
+    parent.adoptChild(child);
+    expect(parent.children).toEqual([child]);
   });
 });
 
