@@ -49,9 +49,8 @@ Pet.prototype.checkUp = function() {
     "I feel great!";
 };
 
-Pet.prototype.adoptChild = function () {
-    const child = new Pet("Child");
-    return this.children.push(child);
+Pet.prototype.adoptChild = function(child) {
+    this.children.push(child);
 };
     
 module.exports = Pet;
