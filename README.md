@@ -3,7 +3,7 @@
 I buit this project using JavaScript as a project for Command Shift bootcamp. I wrote the unit tests using Jest. 
 
 Features:
-- Users can create a viirtual pet and give it a name.
+- Users can create a virtual pet and give it a name.
 - The pet ages and becomes hungrier and less fit.
 - Users can walk, feed and talk to their pet.
 - The pet can adopt a child or have a baby.

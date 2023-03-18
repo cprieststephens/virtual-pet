@@ -181,6 +181,17 @@ describe("checkUp", () => {
 });
 
 describe("adoptChild", () => {
+  it("throws an error if the pet is not alive", () => {
+    const pet = new Pet("Fido");
+    pet.fitness = 0;
+    expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
+            
+    pet.hunger = 10;
+    expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
+            
+    pet.age = 30;
+    expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
+  });
   it("adds child object to parent object's children array", () => {
     const pet = new Pet("Fido");
     const baby = new Pet("Daisy");
@@ -190,6 +201,17 @@ describe("adoptChild", () => {
 });
 
 describe("haveBaby", () => {
+  it("throws an error if the pet is not alive", () => {
+    const pet = new Pet("Fido");
+    pet.fitness = 0;
+    expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
+            
+    pet.hunger = 10;
+    expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
+            
+    pet.age = 30;
+    expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
+  });
   it("creates child object inside existing pet objects's children array", () => {
     const pet = new Pet("Fido");
     pet.haveBaby("Billy");
