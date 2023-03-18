@@ -182,10 +182,10 @@ describe("checkUp", () => {
 
 describe("adoptChild", () => {
   it("adds child object to parent object's children array", () => {
-    const parent = new Pet("Fido");
-    const child = new Pet("Child");
-    parent.adoptChild(child);
-    expect(parent.children).toEqual([child]);
+    const pet = new Pet("Fido");
+    const baby = new Pet("Daisy");
+    pet.adoptChild(baby);
+    expect(pet.children).toEqual([{ name: "Daisy", age: 0, hunger: 0, fitness: 10, children: [] }]);
   });
 });
 
