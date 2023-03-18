@@ -189,3 +189,11 @@ describe("adoptChild", () => {
   });
 });
 
+describe("haveBaby", () => {
+  it("creates child object inside existing pet objects's children array", () => {
+    const pet = new Pet("Fido");
+    pet.haveBaby("Billy");
+    expect(pet.children).toEqual([{ name: "Billy", age: 0, hunger: 0, fitness: 10, children: [] }]);
+  });
+});
+

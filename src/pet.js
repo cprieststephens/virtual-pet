@@ -52,5 +52,10 @@ Pet.prototype.checkUp = function() {
 Pet.prototype.adoptChild = function(child) {
     this.children.push(child);
 };
+
+Pet.prototype.haveBaby = function(childName) {
+    const child = new Pet(childName);
+    this.children[0] = child;
+};
     
 module.exports = Pet;
