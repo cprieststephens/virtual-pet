@@ -55,7 +55,7 @@ describe("isAlive", () => {
   });
 
 describe("growUp", () => {
-  it("throws the exception 'Your pet is no longer alive:(' if the pet is not alive", () => {
+  it("throws an error if the pet is not alive", () => {
     const pet = new Pet("Fido");
     pet.fitness = 0;
     expect(() => pet.growUp()).toThrow("Your pet is no longer alive :(");
@@ -66,17 +66,17 @@ describe("growUp", () => {
     pet.age = 30;
     expect(() => pet.growUp()).toThrow("Your pet is no longer alive :(");
   });
-  it("increments the age by 1", () => {
+  it("increases age by 1", () => {
     const pet = new Pet("Fido");
     pet.growUp();
     expect(pet.age).toEqual(1);
   });
-  it("increments the hunger by 5", () => {
+  it("increases hunger by 5", () => {
     const pet = new Pet("Fido");
     pet.growUp();
     expect(pet.hunger).toEqual(5);
   });
-  it("decrements the fitness by 3", () => {
+  it("decreases fitness by 3", () => {
     const pet = new Pet("Fido");
     pet.growUp();
     expect(pet.fitness).toEqual(7);
@@ -84,7 +84,7 @@ describe("growUp", () => {
 });
 
 describe("walk", () => {
-  it("throws the exception 'Your pet is no longer alive:(' if the pet is not alive", () => {
+  it("throws an error if the pet is not alive", () => {
     const pet = new Pet("Fido");
     pet.fitness = 0;
     expect(() => pet.walk()).toThrow("Your pet is no longer alive :(");
@@ -95,13 +95,13 @@ describe("walk", () => {
     pet.age = 30;
     expect(() => pet.walk()).toThrow("Your pet is no longer alive :(");
   });
-  it("increments the fitness by 4 when the fitness level is less than or equal to 6", () => {
+  it("increases fitness by 4 when the fitness level is less than or equal to 6", () => {
     const pet = new Pet("Fido");
     pet.fitness = 6;
     pet.walk();
     expect(pet.fitness).toEqual(10);
   });
-  it("increments the fitness by (10-fitness level) when the fitness level is greater than 6", () => {
+  it("increases fitness up to a maximum value of 10 when the fitness level is greater than 6", () => {
     const pet = new Pet("Fido");
     pet.fitness = 7;
     pet.walk();
@@ -110,7 +110,7 @@ describe("walk", () => {
 });
 
 describe("feed", () => {
-  it("throws the exception 'Your pet is no longer alive:(' if the pet is not alive", () => {
+  it("throws an error if the pet is not alive", () => {
     const pet = new Pet("Fido");
     pet.fitness = 0;
     expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
@@ -121,13 +121,13 @@ describe("feed", () => {
     pet.age = 30;
     expect(() => pet.feed()).toThrow("Your pet is no longer alive :(");
   });
-  it("decrements the hunger by 3 when the hunger level is greater than or equal to 3", () => {
+  it("decreases hunger by 3 when hunger is greater than or equal to 3", () => {
     const pet = new Pet("Fido");
     pet.hunger = 9;
     pet.feed();
     expect(pet.hunger).toEqual(6);
   });
-  it("decrements the hunger level by the value of the hunger level if less than 3", () => {
+  it("decreases hunger to minimum value of 0 if hunger is less than 3", () => {
     const pet = new Pet("Fido");
     pet.hunger = 2;
     pet.feed();
@@ -164,7 +164,7 @@ describe("checkUp", () => {
     pet.checkUp();
     expect(pet.checkUp()).toEqual("I am hungry")
   });
-  it("returns 'I am hungry AND I need a walk when the fitness is less than or equal to 3 and the hunger is greater than or equal to 5", () => {
+  it("returns 'I am hungry AND I need a walk' when fitness is less than or equal to 3 and hunger is greater than or equal to 5", () => {
     const pet = new Pet("Fido");
     pet.fitness = 3;
     pet.hunger = 5;

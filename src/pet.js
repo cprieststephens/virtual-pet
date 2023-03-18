@@ -4,7 +4,7 @@ function Pet(name) {
     this.hunger = 0;
     this.fitness = 10;
     this.children = [];
-}
+};
 
 Pet.prototype = {
     get isAlive() {
@@ -15,8 +15,7 @@ Pet.prototype = {
 Pet.prototype.growUp = function() {
     if (!this.isAlive) {
         throw new Error("Your pet is no longer alive :(");
-      }
-    this.age
+      };
     this.age += 1;
     this.hunger += 5;
     this.fitness -= 3;
@@ -24,11 +23,11 @@ Pet.prototype.growUp = function() {
 
 Pet.prototype.walk = function() {
     const fitnessIncrementPerWalk = 4;
-    const maxFitnessLevel = 10;
+    const maximumFitnessLevel = 10;
     if (!this.isAlive) {
         throw new Error("Your pet is no longer alive :(");
       }
-    this.fitness <= 6 ? this.fitness += fitnessIncrementPerWalk : this.fitness += (maxFitnessLevel - this.fitness);
+    this.fitness <= 6 ? this.fitness += fitnessIncrementPerWalk : this.fitness += (maximumFitnessLevel - this.fitness);
 };
 
 Pet.prototype.feed = function() {
