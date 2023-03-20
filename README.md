@@ -1,6 +1,6 @@
 # Virtual Pet
 
-I buit this project using JavaScript as a project for Command Shift bootcamp. I wrote the unit tests using Jest. 
+I built this project using JavaScript as a project for Command Shift bootcamp. I wrote the unit tests using Jest. 
 
 Features:
 - Users can create a virtual pet and give it a name.
@@ -21,7 +21,7 @@ Use the command `npm install` to download the project's dependencies and create 
 
 ### Running the tests
 
-Use the command `npm run test` to run the Jest tests for this project.
+Use the command `npm test` to run the Jest tests for this project.
 
 ### How to play
 
@@ -38,3 +38,5 @@ Use the command `npm run test` to run the Jest tests for this project.
 - To exit the Node REPL use `ctrl` + `d`.
 
 Author: Camilla Priest-Stephens with guidance from Command Shift. 
+
+This project was refactored following a code review by Command Shift tutor Perry Baran.
