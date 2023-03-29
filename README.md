@@ -1,6 +1,6 @@
 # Virtual Pet
 
-I built this project using JavaScript as a project for Command Shift bootcamp. I wrote the unit tests using Jest. 
+I completed this guided project using JavaScript as part of Command Shift bootcamp. I wrote the unit tests using Jest. 
 
 Features:
 - Users can create a virtual pet and give it a name.
