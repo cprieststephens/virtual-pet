@@ -37,6 +37,3 @@ Use the command `npm test` to run the Jest tests for this project.
 - The second way is to return `*objectName*.haveBaby(*"childPetName"*);` e.g `pet.haveBaby("Billy");`. Again, you should see the new pet in its parent's `children` array.
 - To exit the Node REPL use `ctrl` + `d`.
 
-Author: Camilla Priest-Stephens with guidance from Command Shift. 
-
-This project was refactored following a code review by Command Shift tutor Perry Baran.
